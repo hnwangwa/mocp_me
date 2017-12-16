@@ -19,7 +19,7 @@ function onloadFunction(){
 // ~~~~~~~~~~~~~~~ resizes #upload ~~~~~~~~~~~~~~~
 function resizeMainReturn(){
 	var logoHeight = $(".description-text").height();
-	var imageHeight = $(".uploaded-image").height();
+	var imageHeight = $("#parallax-image").height();
 	$(".logo-sideways").css("height", logoHeight);
 	$(".description").css("margin-top", (imageHeight-logoHeight)/2);
 	$(".description").css("margin-bottom", (imageHeight-logoHeight)/2);
@@ -162,7 +162,7 @@ function onScrollForUpload(){
 				$(".partial-navbar-logo").removeClass("exit-right");
 			}
 			$('.uploaded-image').each(function(){
-		        var scroll_speed = 40;
+		        var scroll_speed = 50;
 		        var $this = $(this);
 		        $(window).scroll(function() {
 		            var bgScroll = -((window.pageYOffset - $this.offset().top)/ scroll_speed);
