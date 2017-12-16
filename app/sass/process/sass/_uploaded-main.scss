@@ -31,7 +31,10 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    transition:all .1s linear;
+    transform: translateZ(-50px);
 }
+
 .returned-text{
 	background-image: url("../images/filtered-upload.jpg");
 	height:50vh;

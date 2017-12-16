@@ -161,6 +161,16 @@ function onScrollForUpload(){
 			if (y_scroll_pos < navbarAnimationTrigger +120){
 				$(".partial-navbar-logo").removeClass("exit-right");
 			}
+			$('.uploaded-image').each(function(){
+		        var scroll_speed = 40;
+		        var $this = $(this);
+		        $(window).scroll(function() {
+		            var bgScroll = -((window.pageYOffset - $this.offset().top)/ scroll_speed);
+		            var bgPosition = 'center '+ bgScroll + 'px';
+		            $('.uploaded-image').css({ backgroundPosition: bgPosition });
+		        });
+		    });
+
 		});
 	}
 }
