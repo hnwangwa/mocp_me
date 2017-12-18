@@ -22,6 +22,8 @@
     "express": "^4.16.2",
     "fs": "0.0.1-security",
     "mysql2": "^1.5.1",
+    "nightmare": "^2.10.0",
+    "nightmare-upload": "^0.1.1",
     "path": "^0.12.7",
     "s": "^0.1.1",
     "sequelize": "^4.28.5"

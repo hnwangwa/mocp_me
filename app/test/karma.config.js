@@ -12,7 +12,7 @@ module.exports = function(config) {
     frameworks: ["mocha", "browserify"],
 
     // list of files / patterns to load in the browser
-    files: ["src/*.js", "test/*.js"],
+    files: ["routes/*.js", "config/*.js", "models/*.js", "public/js/*.js", "sass/*.js", ],
 
     // list of files to exclude
     exclude: [],
@@ -29,7 +29,7 @@ module.exports = function(config) {
     reporters: ["progress", "mocha"],
 
     // web server port
-    port: 8080 ,
+    port: 6969 ,
 
     // enable / disable colors in the output (reporters and logs)
     colors: true,
