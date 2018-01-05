@@ -41,9 +41,9 @@ module.exports = function(app) {
 
 // ~~~~~~~~~~~~~~~~~~~~ Dont worry about this - Amanda ~~~~~~~~~~~~~~~~~~~~~
   app.get("/api/posts/", function(req, res) {
-    db.Hashtag.findAll({})
-    .then(function(dbPost) {
-      res.json(dbPost);
+    db.Hashtags.findAll({})
+    .then(function(dbHashtags) {
+      res.json(dbHashtags);
     });
   });
 
