@@ -21,15 +21,20 @@ function getURL(tag) {
 }
 
 // ~~~~~~~~~~~~~~~~~~~~ Dont worry about this - Amanda ~~~~~~~~~~~~~~~~~~~~~
-// function submitPost(post) {
-// 	$.post("/api/new-hashtags", post, function() {
-//   		db.Hashtags.create(req.body).then(function(dbHashtags) {
-//     	  res.json(dbHashtags);
-//     	});
-// 	});
+// function submitPost(Post) {
+// 	$.post("/api/posts/", Post, function() {
+//       console.log(Post);
+//     });
 // }
 
-// submitPost("hello world");
+// $.get("/api/posts/", function(req, res) {
+//     db.Hashtag.findAll({})
+//     .then(function(dbPost) {
+//       res.json(dbPost);
+//     });
+//   });
+
+// submitPost("hello_world");
 // ~~~~~~~~~~~~~~~~~~~~ Dont worry about this - Amanda ~~~~~~~~~~~~~~~~~~~~~
 
 getURL("tag-one");

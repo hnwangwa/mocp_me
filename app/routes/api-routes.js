@@ -40,10 +40,12 @@ module.exports = function(app) {
   });
 
 // ~~~~~~~~~~~~~~~~~~~~ Dont worry about this - Amanda ~~~~~~~~~~~~~~~~~~~~~
-  // app.get("/api/new-hashtags", function(req, res) {
-  //   console.log(req.body);
-   
-  // });
+  app.get("/api/posts/", function(req, res) {
+    db.Hashtag.findAll({})
+    .then(function(dbPost) {
+      res.json(dbPost);
+    });
+  });
 
 
   // app.post("/api/new", function(req, res) {
