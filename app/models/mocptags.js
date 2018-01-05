@@ -1,18 +1,25 @@
-module.exports = function(sequelize, DataTypes) {
-  var Tags = sequelize.define("Tags", {
-    id: {
-      type: DataTypes.INTEGER,
-      primaryKey: true
-    },
-    tag_name: {
-      type: DataTypes.STRING
-    },
-    photo_id: {
-    	type: DataTypes.INTEGER
-    }
-  }, {
-    timestamps: false
-  });
+// module.exports = function(sequelize, DataTypes) {
+
+// Sequelize (capital) references the standard library
+var Sequelize = require("sequelize");
+// sequelize (lowercase) references our connection to the DB.
+
+// ***STUFF ADDED STARTS HERE*****
+var sequelize = require("../config/connection.js");
+// Creates a "Hashtag" model that matches up with DB
+var Hashtags = sequelize.define("hashtags", {
+  routeName: Sequelize.STRING,
+  tag_name: Sequelize.STRING,
+  photo_id: Sequelize.STRING
+}, {
+  timestamps: false
+});
+
+Hashtags.sync();
+
+module.exports = Hashtags;
+
+// *** STUFF ADDED ENDS HERE*****÷
 
   // Tags.associate = function(models) {
   //   // We're saying that a Tags should belong to an Photos
@@ -24,5 +31,5 @@ module.exports = function(sequelize, DataTypes) {
   //   });
   // };
 
-  return Tags;
-};
+//   return Tags;
+// };

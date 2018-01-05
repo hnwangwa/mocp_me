@@ -1,6 +1,4 @@
 var db = require("../models");
-// ***ADDED BY HOLLY****
-var Hashtags = require("../models/mocptags.js");
 
 
 // Routes
@@ -31,25 +29,50 @@ module.exports = function(app) {
     });
   });
 
+  app.get("/api/return-all-tags-from-id/:photo_id", function(req, res) {
+    db.Tags.findAll({
+      where: {
+        photo_id: req.params.photo_id
+      }
+    }).then(function(dbTags) {
+      res.json(dbTags);
+    });
+  });
 
-// *****STUFF HOLLY ADDED STARTS HERE****** //
-  // If a user sends data to add a new hashtag...
-  app.post("/api/new", function(req, res) {
+// ~~~~~~~~~~~~~~~~~~~~ Dont worry about this - Amanda ~~~~~~~~~~~~~~~~~~~~~
+  // app.get("/api/new-hashtags", function(req, res) {
+  //   console.log(req.body);
+   
+  // });
 
-    // console.log(req);
-    // console.log(res);
-    // Take the request...
-    var tags = req.body;
 
-    // Create a routeName
-    var routeName = tags.name.replace(/\s+/g, "").toLowerCase();
+  // app.post("/api/new", function(req, res) {
+  //   // console.log(req);
+  //   // console.log(res);
+  //   // Take the request...
+  //   var tags = req.body;
 
+<<<<<<< HEAD
     // Then add the hashtags to the database using sequelize
     Hashtags.create({
       routeName: routeName,
       tag_name: tags.tag_name,
+      photo_id: tags.photo_id
     });
 // ****STUFF HOLLY ADDED ENDS HERE ****** //
   });
+=======
+  //   // Create a routeName
+  //   var routeName = tags.name.replace(/\s+/g, "").toLowerCase();
+
+  //   // Then add the hashtags to the database using sequelize
+  //   Hashtags.create({
+  //     routeName: routeName,
+  //     tag_name: tags.tag_name,
+  //   });
+
+  // });
+// ~~~~~~~~~~~~~~~~~~~~ Dont worry about this - Amanda ~~~~~~~~~~~~~~~~~~~~~
+>>>>>>> e1d121264826ed8fcf06dad71bf9a3e0a29d78f3
 
 };
