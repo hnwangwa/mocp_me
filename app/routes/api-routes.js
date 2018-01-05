@@ -53,6 +53,7 @@ module.exports = function(app) {
   //   var tags = req.body;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     // Then add the hashtags to the database using sequelize
     Hashtags.create({
       routeName: routeName,
@@ -62,6 +63,8 @@ module.exports = function(app) {
 // ****STUFF HOLLY ADDED ENDS HERE ****** //
   });
 =======
+=======
+>>>>>>> e1d121264826ed8fcf06dad71bf9a3e0a29d78f3
   //   // Create a routeName
   //   var routeName = tags.name.replace(/\s+/g, "").toLowerCase();
 
@@ -73,6 +76,9 @@ module.exports = function(app) {
 
   // });
 // ~~~~~~~~~~~~~~~~~~~~ Dont worry about this - Amanda ~~~~~~~~~~~~~~~~~~~~~
+<<<<<<< HEAD
+>>>>>>> e1d121264826ed8fcf06dad71bf9a3e0a29d78f3
+=======
 >>>>>>> e1d121264826ed8fcf06dad71bf9a3e0a29d78f3
 
 };
