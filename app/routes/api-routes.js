@@ -1,4 +1,6 @@
 var db = require("../models");
+// ***ADDED BY HOLLY****
+var Hashtags = require("../models/mocptags.js");
 
 
 // Routes
@@ -40,13 +42,17 @@ module.exports = function(app) {
   });
 
 // ~~~~~~~~~~~~~~~~~~~~ Dont worry about this - Amanda ~~~~~~~~~~~~~~~~~~~~~
-  // app.get("/api/new-hashtags", function(req, res) {
-  //   console.log(req.body);
-   
-  // });
+  app.get("/api/posts/", function(req, res) {
+    db.Hashtags.findAll({})
+    .then(function(dbHashtags) {
+      res.json(dbHashtags);
+    });
+  });
 
 
+  // // If a user sends data to add a new hashtag...
   // app.post("/api/new", function(req, res) {
+
   //   // console.log(req);
   //   // console.log(res);
   //   // Take the request...
@@ -60,8 +66,6 @@ module.exports = function(app) {
   //     routeName: routeName,
   //     tag_name: tags.tag_name,
   //   });
-
   // });
-// ~~~~~~~~~~~~~~~~~~~~ Dont worry about this - Amanda ~~~~~~~~~~~~~~~~~~~~~
 
 };

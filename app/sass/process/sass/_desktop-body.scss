@@ -5,7 +5,7 @@
 		}
 		background:none;
 		overflow-x: hidden;
-		height:465vh;
+		height:455vh;
 		z-index: -1000000000000000000 !important;
 		.intro{
 			// z-index:100000000000000000000000000000000000000000000000 !important;
@@ -204,15 +204,15 @@
 		.footer{
 			z-index: 1000000000000000000000000000000000000 !important;
 			@include clearfix;
-			margin-top:300vh !important;
+			margin-top:314vh;
 			background-color: black;
-			height:500vh !important;
+			height:105vh !important;
 			width:100vw;
 			.footer-maintext{
 				margin-right:34vw;
 				margin-left:34vw;
 				width:28vw;
-				padding-top:30vh !important;
+				padding-top:10vh;
 				.btn-block{
 					border-radius:2px;
 					background-color: black;
@@ -242,18 +242,10 @@
 				display:none !important;
 			}
 			.bottom-footer{
-				position:relative;
 				width:100vw;
-				top:-5vh !important;
-				padding-left:10vw;
-				color: $lightGray;
-				padding-top:25vh;
-				background-color:black; 
-				padding-bottom:20vh;
-				h6{
-					margin:0;
-					padding:0;
-				}
+				margin-top: 35vh;
+				margin-left:10vw;
+				color: $reallyLightGray;
 			}
 		}
 	}
@@ -342,7 +334,7 @@
 				padding-top: 15vh;
 			}
 			.bottom-footer{
-				padding-top:30vh;
+				margin-top: 25vh;
 			}
 		}
 	}
